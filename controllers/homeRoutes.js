@@ -37,7 +37,7 @@ router.get('/blog/:id', async (req, res) => {
       ],
     });
 
-    const project = blogData.get({ plain: true });
+    const blog = blogData.get({ plain: true });
 
     res.render('blog', {
       ...blog,
