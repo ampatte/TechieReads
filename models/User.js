@@ -19,21 +19,22 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      validate: {
+        len: [8],
+      },
+      defaultValue: false,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      validate: {
-        isEmail: true,
-      },
+      defaultValue: false,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        length: [8],
+        len: [8],
       },
     },
   },
